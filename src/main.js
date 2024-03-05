@@ -35,7 +35,6 @@ galleryForm.addEventListener("submit", event => {
     galleryList.innerHTML = "";
     loader.classList.remove("is-hidden")
     imageFetchPromise = getImages(search.value.trim(), page);
-    console.log(imageFetchPromise);
     imageFetchPromise.then(data => {
         if(!data.totalHits){
             iziToast.error({
